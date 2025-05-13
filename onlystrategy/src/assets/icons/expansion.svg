@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe-2">
+  <path d="M21.54 15H17l-1.96-3.46A5 5 0 0 0 13.04 2Z"/>
+  <path d="M10.03 21.46C6.77 20.1 4.25 17.15 3.22 13.54L2.54 15H7l1.96 3.46A5 5 0 0 0 10.96 22Z"/>
+  <path d="M2.54 9H7l1.96-3.46A5 5 0 0 1 10.96 2L10.03 2.54C6.77 3.9 4.25 6.85 3.22 10.46L2.54 9Z"/>
+  <path d="M17 9h4.46l.72-2.46a5 5 0 0 0-1.96-4.08L21.54 9Z"/>
+  <path d="M13.04 22l.93-.46a5 5 0 0 0 1.96-4.08L17 15h4.46l.72 2.46a5 5 0 0 1-1.96 4.08L13.04 22Z"/>
+  <circle cx="12" cy="12" r="10"/>
+</svg>

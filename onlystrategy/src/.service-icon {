@@ -1,0 +1,4 @@
+.service-icon {
+    stroke: var(--primary-color);
+    fill: var(--secondary-color); /* Lägg till fyllning */
+}

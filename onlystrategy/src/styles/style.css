@@ -1,0 +1,386 @@
+/* Global Resets and Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=Roboto+Mono&display=swap');
+
+:root {
+    --primary-color: #0F2C59; /* Deep blue */
+    --secondary-color: #2176FF; /* Clear blue */
+    --accent-color: #F4C95D; /* Muted yellow */
+    --background-light: #F9F9FB; /* Offwhite */
+    --text-dark: #2E2E2E; /* Anthracite gray */
+    --text-secondary: #6B7280; /* Gray */
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+
+    --container-width: 1100px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.75em;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.8em; /* Responsive: clamp(2em, 5vw, 3em); */
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em; /* Responsive: clamp(1.8em, 4vw, 2.5em); */
+    font-weight: 700;
+    margin-top: 1.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1em;
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Layout & Container */
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header & Hero Section */
+.hero {
+    background-color: var(--background-light); /* Or a subtle gradient/image */
+    color: var(--text-dark);
+    padding: 4em 0 2em; /* Increased padding */
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hero-logo {
+    margin-bottom: 1.5em;
+}
+
+.hero-logo .logo-only {
+    font-family: var(--font-heading);
+    font-weight: 900; /* Extra bold for ONLY */
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.hero-logo .logo-strategy {
+    font-family: var(--font-heading);
+    font-weight: 400; /* Lighter weight for STRATEGY */
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-left: -2px; /* Adjust spacing if needed */
+}
+
+.hero-content h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 1.5em auto;
+    color: var(--text-dark);
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #17427D; /* Darker blue from brand guide */
+    color: var(--white);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Main Content & Sections */
+main {
+    flex-grow: 1;
+    padding: 2em 0;
+}
+
+.section {
+    background-color: var(--white);
+    padding: 2.5em; /* Increased padding */
+    margin-bottom: 2em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 90%; /* Ensure sections are not full-width by default */
+    max-width: var(--container-width); /* Max width for sections */
+    margin-left: auto; /* Center sections */
+    margin-right: auto; /* Center sections */
+}
+
+.section h2 {
+    margin-top: 0; /* Reset margin for section titles */
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.3em;
+    display: inline-block;
+}
+
+/* Services List */
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    stroke: #007BFF; /* Blå färg för ikoner */
+    fill: none; /* Ingen fyllning */
+}
+
+.service-icon:hover {
+    stroke: #0056b3; /* Mörkare blå vid hover */
+    transition: stroke 0.3s ease;
+}
+
+/* Delivery List & Approach List */
+.delivery-list,
+#our-approach ol {
+    list-style-position: inside;
+}
+
+#our-approach ol li {
+    font-weight: 600;
+    margin-bottom: 0.8em;
+}
+#our-approach ol li::marker {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--background-light);
+    padding: 3em 0;
+    text-align: center;
+    margin-top: auto; /* Pushes footer to bottom */
+}
+
+.footer-content {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 1.5em;
+    color: var(--background-light);
+    font-size: 0.9em;
+}
+
+.contact-form h3 {
+    color: var(--white);
+    margin-bottom: 1em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 1em;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    /* Using .cta-button styles */
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #17427D; /* Darker blue from brand guide */
+    color: var(--white);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-logo .logo-only,
+    .hero-logo .logo-strategy {
+        font-size: 2em;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 1.5em;
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .services-list {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-logo .logo-only,
+    .hero-logo .logo-strategy {
+        font-size: 1.8em;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .cta-button,
+    .contact-form button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        width: auto; /* Ensure button is not full width unless intended */
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 90%; /* Adjust form input width */
+    }
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.language-switcher button {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-switcher button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.language-switcher button.active {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+    font-weight: bold;
+}

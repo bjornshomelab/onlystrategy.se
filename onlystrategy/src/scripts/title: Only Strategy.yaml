@@ -1,0 +1,8 @@
+title: Only Strategy
+description: >- # detta visas i meta-taggar och RSS-flöden
+  Vi hjälper företag att utveckla vinnande strategier för tillväxt och framgång.
+baseurl: "" # lämna tomt om du använder en anpassad domän som root
+url: "https://onlystrategy.se" # din webbplats fullständiga URL
+
+sass:
+  sass_dir: _sass
